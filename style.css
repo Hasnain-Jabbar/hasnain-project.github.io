@@ -18,7 +18,10 @@ body {
   background-color: rgb(130, 174, 70);
   padding: 5px;
 }
-
+#nav-1,#responsive{
+  position: sticky;
+  top: 0;
+}
 nav ul {
   list-style-type: none;
   padding: 10px;
@@ -255,7 +258,6 @@ a {
 }
 
 .box {
-  /* height: 200px; */
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -282,14 +284,22 @@ a {
   margin: 70px 0px;
 }
 
+#left-outer-screen {
+  width: 100vw;
+  height: 100vh;
+
+  backdrop-filter: brightness(50%);
+}
+
 #left-screen {
   gap: 10px;
+  padding: 0% 30%;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  float: right;
-  backdrop-filter: brightness(60%);
+  /* float: right; */
   padding: 30px;
-  height: inherit;
 }
 
 .clr-title {
@@ -397,29 +407,37 @@ a {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   margin: 70px;
+  height: 50vh;
 }
 
 #left {
-  margin: 70px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #right {
-  margin: 70px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #right input:not(#btn) {
-  width: 300px;
+  width: 200px;
   padding: 5px 15px;
-  font-size: 30px;
+  font-size: 14px;
   margin: 0;
+  border: 0;
 }
 
 #btn {
-  /* width: 10px; */
+  /* width: 0px; */
   background-color: rgb(130, 174, 70);
   color: white;
   padding: 4px 15px;
-  font-size: 30px;
+  font-size: 14px;
+  border: 0;
   margin: 0;
 }
 
@@ -464,7 +482,6 @@ a {
 
 .footer ul {
   list-style-type: none;
-  margin: 50px 30px;
 }
 
 .footer ul li {
@@ -546,7 +563,21 @@ footer .logo .logo-circle .logos {
     grid-column-gap: 20px;
     grid-row-gap: 20px;
   }
+
+  #right {
+    margin: 70px 0px;
+  }
+
+  #right input:not(#btn) {
+    font-size: 14px;
+    width: 200px;
+  }
+
+  #btn {
+    font-size: 14px;
+  }
 }
+
 @media screen and (max-width:768px) {
   #responsive {
     display: flex;
@@ -572,8 +603,8 @@ footer .logo .logo-circle .logos {
 
   #nav-3 {
     padding: 40px 4px;
-    position: absolute;
-    top: 100px;
+    position: relative;
+    /* top: 100px; */
     background-color: #efefef;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     display: flex;
@@ -635,20 +666,27 @@ footer .logo .logo-circle .logos {
     gap: 20px;
   }
 
+  .upper {
+    height: 40px;
+    width: 40px;
+  }
+
+  .upper ion-icon {
+    font-size: 20px;
+  }
+
   .newsletter {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
-    grid-row-gap: 30px;
+    grid-row-gap: 0px;
     place-items: center;
     margin: 30px;
   }
 
   #btn {
-    font-size: 20px;
     text-align: center;
-    border: 2px solid rgb(130, 174, 70);
   }
 
   .upper {
@@ -678,10 +716,24 @@ footer .logo .logo-circle .logos {
     font-size: 15px;
   }
 
-  .cards-2 .parent .div2 h1, .div2 button {
-    font-size:medium;
+  .cards-2 .parent .div2 h1,
+  .div2 button {
+    font-size: medium;
   }
+
+  .companies img {
+    width: 150px;
+  }
+
+  .box img {
+    width: 80%;
+  }
+
+  /* #newsletter{
+    overflow: hidden;
+  } */
 }
+
 @media screen and (max-width:564px) {
   #carasol {
     text-align: center;
@@ -735,6 +787,10 @@ footer .logo .logo-circle .logos {
     grid-row-gap: 20px;
   }
 
+  .companies img {
+    width: 100px;
+  }
+
   #persons {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -742,10 +798,55 @@ footer .logo .logo-circle .logos {
     gap: 50px;
   }
 
+  .person img {
+    height: 120px;
+    border-radius: 50%;
+    width: 120px;
+  }
+
   .footer {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    gap: 20px;
+    /* gap: 20px; */
+  }
+
+  .footer ul {
+    margin: 5px 30px;
+  }
+
+  .newsletter {
+    padding: 50px 0px;
+  }
+
+  #right {
+    flex-direction: column;
+  }
+
+  #newsletter {
+    overflow: hidden;
+    height: 70vh;
+  }
+
+  .upper {
+    bottom: 0;
+  }
+
+  footer .logo .logo-circle {
+    height: 30px;
+    width: 30px;
+  }
+
+  footer .logo .logo-circle .logos {
+    font-size: 20px;
+  }
+  .footer ul{
+    margin: 0px 30px;
+  }
+  footer ul li {
+    font-size: 12px;
+  }
+  .footer ul li h3{
+    font-size: 14px;
   }
 }
