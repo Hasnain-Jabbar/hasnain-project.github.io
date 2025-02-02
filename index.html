@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>VEGEFOODS By Hasnain</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="style.css">
@@ -17,15 +17,44 @@
             <p><ion-icon name="send"></ion-icon>&nbsp;&nbsp;YOUREMAIL@EMAIL.COM</p>
             <p>3-5 BUSINESS DAYS DELIVERY & FREE RETURNS</p>
         </div>
-        <nav>
+        <!-- <nav id="responsive">
+            <div id="nav-2">
+                <a  id="logo" href="">VEGEFOODS</a>
+                <ion-icon id="three-lines" onclick="navbar()" name="reorder-three-outline"></ion-icon>
+                
+            </div>
             <ul>
-                <li><ion-icon name="cart"></ion-icon>[0]</li>
-                <li>CONTACT</li>
-                <li>BLOG</li>
-                <li>ABOUT</li>
-                <li>SHOP</li>
-                <li>HOME</li>
-                <li id="logo">VEGEFOODS</li>
+                <li><a href="#">HOME </a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">ABOUT </a></li>
+                <li><a href="#">BLOG </a></li>
+                <li><a href="#">CONTACT </a></li>
+                <li id="cart"><ion-icon name="cart"></ion-icon>[0]</li>
+            </ul>
+        </nav> -->
+        <nav id="nav-1">
+            <ul>
+                <li><a href="#"><ion-icon name="cart" id="cart"></ion-icon></a></li>
+                <li><a href="#">CONTACT </a></li>
+                <li><a href="#">BLOG </a></li>
+                <li><a href="#">ABOUT </a></li>
+                <li><a href="#">SHOP </a></li>
+                <li><a href="#">HOME </a></li>
+                <li id="logo"><a href=""></a>VEGEFOODS</a></li>
+            </ul>
+        </nav>
+        <nav id="responsive">
+            <div id="nav-2">
+                <a id="logo" href="">VEGEFOODS</a>
+                <ion-icon id="three-lines" onclick="navbar()" name="reorder-three-outline"></ion-icon>
+            </div>
+            <ul id="nav-3">
+                <li><a href="#">HOME </a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">ABOUT </a></li>
+                <li><a href="#">BLOG </a></li>
+                <li><a href="#">CONTACT </a></li>
+                <!-- <li id="cart"><ion-icon name="cart"></ion-icon></li> -->
             </ul>
         </nav>
     </header>
@@ -36,17 +65,33 @@
             <input id="btn-carasol" type="button" value="View Details">
         </section>
         <section id="cards-cirle">
-            <div class="card">
-                <img src="./img/truck.png" alt="" height="100px" width="100px">
+            <div class="para-cards">
+                <div class="card">
+                    <img src="./img/truck.png" alt="" height="100px" width="100px">
+                </div>
+                <h3>Free Shipping</h3>
+                <p>On Order over $1000</p>
             </div>
-            <div class="card">
-                <img src="./img/diet.png" alt="" height="100px" width="100px">
+            <div class="para-cards">
+                <div class="card">
+                    <img src="./img/diet.png" alt="" height="100px" width="100px">
+                </div>
+                <h3>Always Fresh</h3>
+                <p>Product well pakage</p>
             </div>
-            <div class="card">
-                <img src="./img/award.png" alt="" height="100px" width="100px">
+            <div class="para-cards">
+                <div class="card">
+                    <img src="./img/award.png" alt="" height="100px" width="100px">
+                </div>
+                <h3>Supreior Quality</h3>
+                <p>Quality Products</p>
             </div>
-            <div class="card">
-                <img src="./img/support.png" alt="" height="100px" width="100px">
+            <div class="para-cards">
+                <div class="card">
+                    <img src="./img/support.png" alt="" height="100px" width="100px">
+                </div>
+                <h3>Support</h3>
+                <p>24/7 Support</p>
             </div>
         </section>
         <section class="cards-2">
@@ -57,9 +102,9 @@
                     <p>Protect the health of every home</p>
                     <button> Shop </button>
                 </div>
-                <div class="div3"><a href="">Fruits</a></div>
-                <div class="div4"><a href="">Fruits</a></div>
-                <div class="div5"><a href="">Fruits</a></div>
+                <div class="div3"><a href="">Juices</a></div>
+                <div class="div4"><a href="">Vegetables</a></div>
+                <div class="div5"><a href="">Dried</a></div>
             </div>
         </section>
         <section class="cards-3">
@@ -118,7 +163,7 @@
                 </a>
                 <a href="#">
                     <div class="box">
-                        <img src="./img/product-7.jpg" alt="" height="100%" width="100%">
+                        <img src="./img/product-8.jpg" alt="" height="100%" width="100%">
                         <p>FRUIT JUICE</p>
                         <div><span class="pro-color">$120.00</span></div>
                     </div>
@@ -127,15 +172,15 @@
         </section>
         <section class="timer-screen">
             <div id="left-screen">
-                <p class="clr-title">BEST PRICES FOR YOU</p>
+                <h1 class="clr-title">BEST PRICES FOR YOU</h1>
                 <h1>Deal of the day</h1>
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
                 <h2 class="clr-title">Spinach</h2>
-                <p>$10 <span class="clr-title">now $5 only</span></p>
+                <p id="timer-screen-para">$10 <span class="clr-title">now $5 only</span></p>
             </div>
         </section>
         <section class="testimony">
-            <h3 style="color: green;" class="testimony-title">TESTIMONY</h3>
+            <h3 style="color: rgb(130, 174, 70);" class="testimony-title">TESTIMONY</h3>
             <h1 class="testimony-title">Our satisfied customer says</h1>
             <p class="testimony-title">Far far away, behind the word mountains, far from the countries Vokalia and
                 Consonantia, there live the blind texts. Separated they live in</p>
@@ -168,12 +213,14 @@
             </div>
         </section>
         <hr>
-        <section class="companies">
-            <img src="./img/partner-2.png" alt="" width="200px">
-            <img src="./img/partner-1.png" alt="" width="200px">
-            <img src="./img/partner-3.png" alt="" width="200px">
-            <img src="./img/partner-4.png" alt="" width="200px">
-            <img src="./img/partner-5.png" alt="" width="200px">
+        <section class="companies-outer">
+            <div class="companies">
+                <img src="./img/partner-2.png" alt="" width="200px">
+                <img src="./img/partner-1.png" alt="" width="200px">
+                <img src="./img/partner-3.png" alt="" width="200px">
+                <img src="./img/partner-4.png" alt="" width="200px">
+                <img src="./img/partner-5.png" alt="" width="200px">
+            </div>
         </section>
         <section id="newsletter">
             <div class="newsletter">
@@ -190,6 +237,60 @@
         <a href="#top">
             <div class="upper"><ion-icon name="chevron-up-outline"></ion-icon></div>
         </a>
+        <footer>
+            <div class="footer">
+                <ul>
+                    <li>
+                        <h3>VEGEFOODS</h3>
+                    </li>
+                    <li>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <h3>MENU</h3>
+                    </li>
+                    <li>Shop</li>
+                    <li>About</li>
+                    <li>Journal</li>
+                    <li>Contact Us</li>
+                </ul>
+                <ul>
+                    <li>
+                        <h3>Help</h3>
+                    </li>
+                    <li>Shipping information &nbsp; &nbsp;&nbsp; FAQ's</li>
+                    <li>Returns & Exchange &nbsp;&nbsp;&nbsp; Contact</li>
+                    <li>Terms & Conditions</li>
+                    <li>Privacy Policy</li>
+                </ul>
+                <ul>
+                    <li>
+                        <h3>Have a Questions?</h3>
+                    </li>
+                    <li><a href="https://www.google.com/maps"><ion-icon name="location"></ion-icon>&nbsp;&nbsp;&nbsp;203
+                            Fake St. Mountain View, San Francisco, California, USA</a></li>
+                    <li><a href="tel://+923096255781"><ion-icon
+                                name="call"></ion-icon>&nbsp;&nbsp;&nbsp;0309-6255781</a></li>
+                    <li><a href="mailto:mhasnainjabbar0@gmail.com"><ion-icon
+                                name="mail"></ion-icon>&nbsp;&nbsp;&nbsp;mhasnainjabbar0@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <div class="logo-circle">
+                    <ion-icon name="logo-twitter" class="logos"></ion-icon>
+                </div>
+                <div class="logo-circle">
+                    <ion-icon name="logo-facebook" class="logos"></ion-icon>
+                </div>
+                <div class="logo-circle">
+                    <ion-icon name="logo-instagram" class="logos"></ion-icon>
+                </div>
+            </div>
+            <p id="last-line">Copyright &copy; 2025 All rights reserved | This template is made with &#10084; by Hasnain
+                Jabbar</p><br>
+        </footer>
     </main>
     <script src="./a.js"></script>
 </body>
