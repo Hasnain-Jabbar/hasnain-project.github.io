@@ -11,7 +11,6 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
-
 #top {
   display: flex;
   justify-content: space-around;
@@ -87,8 +86,8 @@ nav ul li {
 
 #btn-carasol {
   background-color: rgb(130, 174, 70);
-  border: 2px solid rgb(130, 174, 70);
   color: #fff;
+  border: 0;
   border-radius: 4rem;
   padding: 12px 15px;
   font-size: 25px;
@@ -98,6 +97,7 @@ nav ul li {
 
 #btn-carasol:hover {
   background-color: transparent;
+  border: 2px solid rgb(130, 174, 70);
 }
 
 #cards-cirle {
@@ -211,7 +211,7 @@ nav ul li {
   padding: 5px 15px;
   font-size: 25px;
   border-radius: 4rem;
-  border: 2px solid rgb(130, 174, 70);
+  border: 0;
   color: white;
   background-color: rgb(130, 174, 70);
   transition: 0.5s;
@@ -220,6 +220,7 @@ nav ul li {
 .div2 button:hover {
   background-color: transparent;
   color: rgb(130, 174, 70);
+  border: 2px solid rgb(130, 174, 70);
 }
 
 .cards-3 h1,
@@ -297,6 +298,8 @@ a {
   width: 100vw;
   height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   /* float: right; */
   padding: 30px;
@@ -311,7 +314,7 @@ a {
 }
 
 .testimony {
-  margin: 90px 0px;
+  margin: 120px 0px;
   padding: 10px 30px;
   text-align: center;
 }
@@ -646,12 +649,16 @@ footer .logo .logo-circle .logos {
     grid-column-gap: 20px;
     grid-row-gap: 20px;
   }
-
+  #left-outer-screen{
+    height: 60vh;
+  }
   .timer-screen {
     height: 60vh;
     background-size: cover;
   }
-
+  #left-screen{
+    height: 60vh;
+  }
   #persons {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -728,10 +735,6 @@ footer .logo .logo-circle .logos {
   .box img {
     width: 80%;
   }
-
-  /* #newsletter{
-    overflow: hidden;
-  } */
 }
 
 @media screen and (max-width:564px) {
@@ -850,3 +853,4 @@ footer .logo .logo-circle .logos {
     font-size: 14px;
   }
 }
+
