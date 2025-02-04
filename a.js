@@ -83,15 +83,13 @@ document.getElementById('box4').addEventListener('click',()=>{
 //   }
 // }
 document.getElementsByClassName('circle-box')[0].addEventListener('click', () => {
-  let eye = document.getElementById('eye-icon').name
-  // if(eye === 'eye'){
-  //   eye = "eye-off"
-  // }
-  // else{
-  //   eye = 'eye'
-  // }
-  eye.name = "eye-off"
-  console.log(eye)
+  let eye = document.getElementById('eye-icon')
+  if(eye.name === 'eye'){
+    eye.name = "eye-off"
+  }
+  else{
+    eye.name = 'eye'
+  }
   let a = document.getElementById('box')
   if (a.style.display === 'flex') {
     a.style.display = 'none'
